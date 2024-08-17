@@ -1,0 +1,118 @@
+/* Title */
+.ts-title {
+  margin-bottom: 50px;
+}
+
+.ts-title-color {
+  color: var(--secondary-color);
+}
+
+/* Img list */
+
+.ts-list {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .ts-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px 16px;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .ts-order {
+    order: -1;
+  }
+  .ts-order-two {
+    order: -1;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .ts-order {
+    order: -1;
+  }
+  .ts-order-two {
+    order: -1;
+  }
+}
+.ts-img {
+  border-radius: 15px;
+  width: 335px;
+  height: 464px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .ts-img {
+    width: 344px;
+    margin-bottom: 0;
+  }
+}
+
+/* Buy now btn */
+
+.ts-buy-btn {
+  width: 120px;
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+  color: var(--light-text-color);
+  background-color: var(--secondary-color);
+  border-radius: 100px;
+  border: none;
+  display: flex;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 767px) {
+  .ts-buy-btn {
+    font-size: 18px;
+    line-height: 1.22;
+    width: 162px;
+    padding: 14px 40px;
+  }
+}
+
+.ts-buy-btn:hover,
+.ts-buy-btn:focus {
+  color: var(--secondary-color);
+  background-color: var(--hover-btn-color);
+  transition: var(--transition-dur-timing-func);
+}
+
+/* Section desc */
+
+.ts-text {
+  max-width: 306px;
+  margin: 0;
+}
+.ts-list-text {
+  margin-bottom: 32px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .adpt-hidden {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .adpt-hidden {
+    display: inline;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .ts-text {
+    max-width: 407px;
+  }
+  .ts-img {
+    width: 368px;
+  }
+  .ts-list {
+    gap: 32px 16px;
+    flex-direction: row;
+  }
+}

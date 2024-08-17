@@ -1,0 +1,219 @@
+.footer-section {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  background-color: var(--secondary-background-color);
+}
+@media only screen and (min-width: 768px) {
+  .footer-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+.footer-container {
+}
+.footer-display-container {
+  margin-bottom: 32px;
+}
+@media only screen and (min-width: 768px) {
+  .footer-display-container {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .footer-display-container {
+    margin-bottom: 58px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .footer-heading-container {
+    margin-bottom: 32px;
+  }
+}
+.footer-header-text {
+  display: block;
+
+  width: 300px;
+  height: 56px;
+
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  color: var(--light-text-color);
+}
+@media only screen and (min-width: 768px) {
+  .footer-header-text {
+    height: 68px;
+
+    font-size: 28px;
+    line-height: 1.21;
+  }
+}
+.footer-header-heading-word {
+  color: var(--secondary-color);
+}
+.footer-contacts {
+  display: flex;
+  justify-content: space-between;
+  max-height: 72px;
+}
+
+.footer-contacts-address {
+  font-style: normal;
+}
+@media only screen and (min-width: 768px) {
+  .footer-contacts {
+    gap: 50px;
+    min-width: 280px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .footer-contacts {
+    gap: 63px;
+  }
+}
+/* @media only screen and (min-width: 1200px) {
+  .footer-contacts-address{
+    min-width: 164px;
+    
+  }
+} */
+
+.footer-contacts-heading {
+  margin-bottom: 14px;
+
+  font-weight: 500;
+  color: var(--light-text-color);
+}
+
+.footer-contacts-link {
+  width: 100%;
+  color: var(--light-text-color);
+}
+.footer-contacts-link:hover,
+.footer-contacts-link:focus {
+  color: var(--secondary-color);
+  transition: color var(--transition-dur-timing-func);
+}
+.footer-contacts-item:first-child {
+  margin-bottom: 4px;
+}
+.social-block {
+  display: block;
+}
+.footer-contacts-social {
+  display: flex;
+  gap: 14px;
+}
+@media only screen and (min-width: 1200px) {
+  .footer-contacts-social {
+    gap: 18px;
+  }
+}
+.footer-social-list-item {
+  display: block;
+}
+
+.footer-social-list-link {
+  display: block;
+  color: var(--light-text-color);
+  height: 22px;
+
+  transform: color var(----transition-dur-timing-func);
+}
+@media only screen and (min-width: 768px) {
+  .footer-social-list-link {
+    height: 24px;
+  }
+}
+.footer-social-link:hover {
+  color: var(--secondary-color);
+}
+.footer-social-link:focus {
+  color: var(--secondary-color);
+}
+.footer-social-list-icon {
+  stroke: var(--light-text-color);
+  fill: transparent;
+  transition: stroke var(--transition-dur-timing-func);
+}
+.footer-social-list-icon:hover {
+  stroke: var(--secondary-color);
+}
+.footer-social-list-icon:focus {
+  stroke: var(--secondary-color);
+}
+
+.footer-nav-container {
+  position: relative;
+
+  padding-top: 32px;
+}
+@media only screen and (min-width: 768px) {
+  .footer-nav-container {
+    padding-top: 24px;
+  }
+}
+.footer-nav-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  height: 0px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-nav-list {
+    display: flex;
+    gap: 24px;
+  }
+}
+
+.footer-nav-item:not(:last-child) {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer-nav-item:not(:last-child) {
+    margin-bottom: 18px;
+  }
+}
+
+.footer-nav-link {
+  position: relative;
+
+  font-weight: 500;
+  line-height: 1.14;
+  color: var(--light-text-color);
+  transition: color var(--transition-dur-timing-func);
+}
+.footer-nav-link:hover,
+.footer-nav-link:focus {
+  color: var(--secondary-color);
+}
+.footer-nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+
+  width: 24px;
+  height: 0;
+
+  border: 1px solid #fd9222;
+
+  opacity: 0;
+  transition: opacity var(----transition-dur-timing-func);
+}
+.footer-nav-link:hover::after {
+  opacity: 1;
+}
+.footer-nav-link:focus::after {
+  opacity: 1;
+}

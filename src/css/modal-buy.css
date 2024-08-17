@@ -1,0 +1,338 @@
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(128, 128, 128, 0.4);
+  backdrop-filter: blur(1px);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-dur-timing-func),
+    visibility var(--transition-dur-timing-func);
+}
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-buy {
+  width: 100%;
+  max-width: 311px;
+  padding: 32px 24px;
+  background-color: var(--primary-background-color);
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms;
+  max-height: calc(100vh - 50px);
+  overflow-y: auto;
+}
+.modal-buy.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+  transition: var(--transition-dur-timing-func);
+}
+@media only screen and (min-width: 768px) {
+  .modal-buy {
+    max-width: 609px;
+    padding: 48px;
+    overflow-y: none;
+  }
+}
+.modal-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  transition: background-color var(--transition-dur-timing-func);
+}
+.modal-close-icon {
+  transition: stroke var(--transition-dur-timing-func);
+  stroke: var(--primary-color);
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: var(--hover-btn-color);
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  stroke: var(--secondary-color);
+}
+
+@media only screen and (min-width: 768px) {
+  .modal-buy-close-btn {
+    width: 28px;
+    height: 28px;
+    top: 24px;
+    right: 24px;
+  }
+}
+
+.modal-choc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+@media only screen and (min-width: 768px) {
+  .modal-choc-list {
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+}
+.modal-choc-container {
+  width: 263px;
+  height: 85px;
+  padding: 8px 16px;
+  background: #ffffff;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 768px) {
+  .modal-choc-container {
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+    width: 160px;
+    height: 196px;
+    padding: 24px 0 18px 0;
+  }
+}
+
+.modal-buy-chocolate-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 6px 16px;
+  height: 29px;
+  background-color: var(--primary-background-color);
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 100px;
+}
+.modal-buy-chocolate-button:hover,
+.modal-buy-chocolate-button:focus,
+.modal-buy-chocolate-button:active {
+  background-color: var(--secondary-color);
+}
+
+.modal-chocolate-btn-txt {
+  font-weight: 600;
+  line-height: 1.21;
+}
+
+.modal-buy-chocolate-button:hover,
+.modal-buy-chocolate-button:focus,
+.modal-buy-chocolate-button:active .modal-chocolate-btn-txt {
+  color: white;
+}
+/* MODAL Form */
+label {
+  display: block;
+}
+.modal-form-buy {
+  display: flex;
+  gap: 18px;
+  flex-direction: column;
+}
+.input-desc {
+  display: block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  margin-bottom: 8px;
+}
+@media only screen and (min-width: 768px) {
+  .input-desc {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+}
+
+.name-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+@media only screen and (min-width: 768px) {
+  .name-wrapper {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+.modal-input {
+  width: 100%;
+  height: 45px;
+  background-color: transparent;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  border-radius: 8px;
+  display: flex;
+  outline-offset: -1px;
+  padding: 14px 18px;
+}
+@media only screen and (min-width: 768px) {
+  .modal-input {
+    min-width: 246px;
+    height: 66px;
+  }
+}
+.modal-input:focus {
+  outline: 1px solid var(--secondary-color);
+  transition: outline var(--transition-dur-timing-func);
+}
+.prefix-wrapper {
+  padding-right: 8px;
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-right: 1.5px solid rgba(17, 17, 17, 0.05);
+}
+@media only screen and (min-width: 768px) {
+  .prefix-wrapper {
+    top: 17px;
+    left: 24px;
+    padding-right: 20px;
+  }
+}
+.tel-form-wrapper {
+  position: relative;
+}
+.flag-icon {
+  pointer-events: none;
+  margin-right: 8px;
+}
+@media only screen and (min-width: 768px) {
+  .flag-icon {
+    margin-right: 18px;
+    width: 32px;
+    height: 32px;
+  }
+}
+.tel-input {
+  width: 100%;
+  height: 45px;
+  background-color: transparent;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  border-radius: 8px;
+  display: flex;
+  outline-offset: -1px;
+  padding: 14px 18px 14px 106px;
+}
+.tel-input:focus {
+  outline: 1px solid var(--secondary-color);
+  transition: outline var(--transition-dur-timing-func);
+}
+@media only screen and (min-width: 768px) {
+  .tel-input {
+    min-width: 246px;
+    height: 66px;
+    padding: 17px 24px 17px 177px;
+  }
+}
+.card-form-wrapper {
+  position: relative;
+}
+.ccn-icon {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+@media only screen and (min-width: 768px) {
+  .ccn-icon {
+    top: 18px;
+    right: 24px;
+    width: 44px;
+    height: 30px;
+  }
+}
+
+.modal-heading {
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-color);
+  margin-bottom: 32px;
+}
+.mod-headning-highlighted {
+  color: var(--secondary-color);
+}
+
+.modal-input-comment {
+  background-color: transparent;
+  width: 100%;
+  height: 90px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  border-radius: 8px;
+  resize: none;
+  outline-offset: -1px;
+  padding: 14px 18px;
+}
+.modal-input-comment:focus {
+  outline: 1px solid var(--secondary-color);
+  transition: outline var(--transition-dur-timing-func);
+}
+.modal-buy-btn {
+  width: 109px;
+  height: 41px;
+  font-weight: 600;
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  border-radius: 100px;
+  border: none;
+  padding: 12px 28px;
+}
+@media only screen and (min-width: 768px) {
+  .modal-buy-btn {
+    width: 133px;
+    height: 45px;
+    padding: 14px 40px;
+  }
+}
+.modal-buy-btn:hover,
+.modal-buy-btn:focus,
+.modal-buy-btn:active {
+  background-color: var(--hover-btn-color);
+  color: var(--secondary-color);
+}
+.modal-input-comment::placeholder,
+.modal-input::placeholder,
+.tel-input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.21;
+  color: rgba(64, 64, 64, 0.3);
+}
+@media only screen and (min-width: 768px) {
+  .modal-input-comment::placeholder,
+  .modal-input::placeholder,
+  .tel-input::placeholder {
+    font-size: 18px;
+  }
+}

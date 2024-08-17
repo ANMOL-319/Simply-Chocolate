@@ -1,0 +1,149 @@
+<!-- Order/Buy modal -->
+<div class="backdrop" data-modal="modal-1">
+  <div class="modal-buy">
+    <button type="button" class="modal-close-btn" data-modal-close>
+      <svg class="modal-close-icon" width="24" height="24">
+        <use href="img/icons.svg#close-button"></use>
+      </svg>
+    </button>
+    <strong class="modal-heading"
+      ><span class="mod-headning-highlighted">buy</span> now</strong
+    >
+    <ul class="modal-choc-list">
+      <li class="modal-choc-item">
+        <div class="modal-choc-container">
+          <img
+            class="modal-choc-pic"
+            src="img/modal-buy/choc-piece_84.jpg"
+            alt="piece of chocolate"
+            srcset="
+              img/modal-buy/choc-piece_84.jpg   84w,
+              img/modal-buy/choc-piece_168.jpg 168w,
+              img/modal-buy/choc-piece_120.jpg 120w,
+              img/modal-buy/choc-piece_240.jpg 240w
+            "
+            sizes="(min-width: 768px) 120px, (min-width: 320px) 84px, 100vw"
+          />
+          <button class="modal-buy-chocolate-button" type="button">
+            <span class="modal-chocolate-btn-txt">100 g</span>
+          </button>
+        </div>
+      </li>
+      <li class="modal-choc-item">
+        <div class="modal-choc-container">
+          <img
+            class="modal-choc-pic"
+            src="img/modal-buy/choc-mix_84.jpg"
+            alt="3 types of chocolate"
+            srcset="
+              img/modal-buy/choc-mix_84.jpg   84w,
+              img/modal-buy/choc-mix_168.jpg 168w,
+              img/modal-buy/choc-mix_120.jpg 120w,
+              img/modal-buy/choc-mix_240.jpg 240w
+            "
+            sizes="(min-width: 768px) 120px, (min-width: 320px) 84px, 100vw"
+          />
+          <button class="modal-buy-chocolate-button" type="button">
+            <span class="modal-chocolate-btn-txt">200 g</span>
+          </button>
+        </div>
+      </li>
+      <li class="modal-choc-item">
+        <div class="modal-choc-container">
+          <img
+            class="modal-choc-pic"
+            srcset="
+              img/modal-buy/choc-bar_84.jpg   84w,
+              img/modal-buy/choc-bar_168.jpg 168w,
+              img/modal-buy/choc-bar_120.jpg 120w,
+              img/modal-buy/choc-bar_240.jpg 240w
+            "
+            sizes="(min-width: 768px) 120px, (min-width: 320px) 84px, 100vw"
+            src="img/modal-buy/choc-bar_84.jpg"
+            alt="bar of chocolate"
+          />
+          <button class="modal-buy-chocolate-button" type="button">
+            <span class="modal-chocolate-btn-txt">300 g</span>
+          </button>
+        </div>
+      </li>
+    </ul>
+    <form class="modal-form-buy" name="modal_form">
+      <div class="modal-label">
+        <span class="input-desc">Personal information</span>
+        <span class="name-wrapper">
+          <input
+            class="modal-input"
+            type="text"
+            name="modal_name"
+            placeholder="Name"
+            required
+          />
+          <input
+            class="modal-input"
+            type="text"
+            name="modal_name"
+            placeholder="Surname"
+            required
+          />
+        </span>
+      </div>
+
+      <label class="modal-label">
+        <span class="input-desc">Email</span>
+        <input
+          class="modal-input"
+          type="email"
+          name="modal_email"
+          required
+          placeholder="Enter your email"
+        />
+      </label>
+      <div class="modal-label">
+        <span class="input-desc">Phone number</span>
+        <div class="tel-form-wrapper">
+          <div class="prefix-wrapper">
+            <span class="prefix">+61</span>
+          </div>
+          <input
+            placeholder="Phone number"
+            required
+            pattern="^\d{10}$"
+            title="xxx-xx-xx"
+            class="tel-input"
+            type="tel"
+            name="modal_tel"
+            id="modal_tel"
+          />
+        </div>
+      </div>
+      <label class="modal-label">
+        <span class="input-desc">Card Number:</span>
+        <span class="card-form-wrapper">
+          <input
+            class="modal-input"
+            type="tel"
+            inputmode="numeric"
+            pattern="[0-9\s]{13,19}"
+            maxlength="19"
+            placeholder="Enter card"
+          />
+          <svg class="ccn-icon" width="32" height="21">
+            <use href="img/icons.svg#mastercard"></use>
+          </svg>
+        </span>
+      </label>
+      <label class="modal-label">
+        <span class="input-desc">Comment</span>
+        <textarea
+          class="modal-input-comment"
+          rows="6"
+          placeholder="Enter text"
+        ></textarea>
+      </label>
+      <button type="submit" class="modal-buy-btn" data-modal-close>
+        Submit
+      </button>
+    </form>
+  </div>
+</div>

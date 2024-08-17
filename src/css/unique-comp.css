@@ -1,0 +1,256 @@
+.section-comp-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  height: 204px;
+}
+
+@media only screen and (min-width: 768px) {
+  .section-comp-container {
+    margin-bottom: 50px;
+  }
+}
+
+.section-components {
+  padding-top: 72px;
+}
+
+@media only screen and (min-width: 768px) {
+  .section-components {
+    padding-top: 100px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .section-components {
+    padding-top: 128px;
+  }
+}
+
+.section-components-title {
+  font-family: var(--primary-font);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.accent {
+  color: var(--secondary-color);
+}
+
+.section-components-about {
+  text-align: center;
+  width: 100%;
+}
+
+.components-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.components-item {
+  height: 270px;
+}
+
+.front-item {
+  max-width: 335px;
+  height: 270px;
+  border-radius: 15px;
+  background-color: var(--secondary-color);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.front-item-img {
+  width: 224px;
+  height: 171px;
+  background-color: transparent;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.front-item-nuts {
+  background-color: var(--primary-color);
+}
+
+.front-item-hotchoc {
+  background-color: #ffffff;
+  border: 1px solid var(--secondary-color);
+}
+
+.front-item-milk {
+  background-color: #ffffff;
+  border: 1px solid var(--secondary-color);
+}
+
+.front-item-name {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.28;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.secondary-name {
+  color: var(--primary-color);
+}
+
+/*---overlay--*/
+
+.back-item {
+  height: 270px;
+  padding: 28px;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+@media only screen and (min-width: 1200px) {
+  .back-item {
+    padding: 20px;
+  }
+}
+
+.flip {
+  position: relative;
+  overflow-y: hidden;
+}
+
+.flip .front-item,
+.flip .back-item {
+  display: block;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 0.5s;
+  transition-property: transform, opacity;
+}
+
+.flip .front-item {
+  transform: rotateY(0deg);
+}
+
+.flip .back-item {
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(-180deg);
+}
+
+.flip:hover .front-item,
+.flip:focus .front-item {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+
+.flip:hover .back-item,
+.flip:focus .back-item {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.back-item-title {
+  font-size: 18px;
+  line-height: 1.22;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.back-items-block {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.back-item-ingredient {
+  border-radius: 35px;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--secondary-color);
+  font-size: 10px;
+  line-height: 0.83;
+  text-align: center;
+  padding: 6px 16px;
+  text-transform: lowercase;
+  color: #ffffff;
+}
+
+.back-item-benefits {
+  border-radius: 35px;
+  border: 1px solid var(--secondary-color);
+  background-color: #ffffff;
+  font-size: 10px;
+  line-height: 0.83;
+  text-align: center;
+  padding: 6px 16px;
+  text-transform: lowercase;
+  color: var(--primary-color);
+}
+
+.back-item-about {
+  max-height: 146px;
+  text-align: left;
+  overflow-y: scroll;
+}
+
+@media screen and (min-width: 768px) {
+  .section-comp-container {
+    margin-bottom: 0;
+    width: 486px;
+    align-items: center;
+  }
+
+  .section-components-title {
+    width: 411px;
+    justify-content: center;
+  }
+
+  .components-list {
+    width: 704px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .components-item {
+    width: calc((100% - 32px) / 2);
+  }
+
+  .components-item:nth-of-type(2) {
+    order: 1;
+  }
+
+  .components-item:nth-of-type(3) {
+    order: 2;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .components-list {
+    flex-wrap: nowrap;
+    width: 1136px;
+    gap: 20px;
+  }
+
+  .components-item {
+    width: calc((100% - 60px) / 4);
+  }
+
+  .front-item-img {
+    width: 206px;
+    height: 160px;
+    margin-bottom: 36px;
+  }
+
+  .components-item:nth-of-type(4) {
+    order: 3;
+  }
+}

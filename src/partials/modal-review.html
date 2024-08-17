@@ -1,0 +1,56 @@
+<!-- Order/Buy modal -->
+<div class="backdrop" data-modal="modal-2">
+  <div class="modal-container">
+    <button type="button" class="modal-close-btn" data-modal-close>
+      <svg class="modal-close-icon" width="24" height="24">
+        <use href="img/icons.svg#close-button"></use>
+      </svg>
+    </button>
+    <h2 class="section-title modal-heading">
+      leave a review<br />
+      about<span class="mod-headning-highlighted"> our chocolate</span>
+    </h2>
+    <form class="modal-form-review" name="modal_form" autocomplete="on">
+      <div class="form-wrapper">
+        <input
+          class="modal-input-review"
+          type="text"
+          name="modal_name"
+          placeholder="Name"
+          required
+        />
+      </div>
+      <div class="form-wrapper">
+        <input
+          class="modal-input-review"
+          type="email"
+          name="modal_email"
+          required
+          placeholder="Enter your email"
+        />
+      </div>
+      <div class="tel-form-wrapper">
+        <div class="prefix-wrapper">
+          <span class="prefix">+61</span>
+        </div>
+        <input
+          class="tel-input"
+          type="tel"
+          name="modal_tel"
+          placeholder="Phone number"
+          required
+          pattern="^\d{10}$"
+          title="xxx-xx-xx"
+        />
+      </div>
+      <textarea
+        class="modal-input-review modal-input-comment"
+        rows="6"
+        placeholder="Enter text"
+      ></textarea>
+    </form>
+    <button type="submit" class="button modal-buy-btn" data-modal-close>
+      Send
+    </button>
+  </div>
+</div>

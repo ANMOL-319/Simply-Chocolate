@@ -1,0 +1,159 @@
+/* How its made styles */
+.how-made-title {
+  margin-bottom: 32px;
+}
+
+.how-made-color {
+  color: var(--secondary-color);
+}
+
+.how-made-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.wrapper-video {
+  max-width: 335px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.wrapper-video .player {
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+}
+
+.wrapper-video .player .video {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.wrapper-video .player .controls {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.wrapper-video .player .controls_play {
+  position: absolute;
+  top: calc(50%);
+  left: calc(50%);
+  transform: translate(-50%, -50%) scale(1);
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .how-made-title {
+    margin-bottom: 50px;
+    font-size: 24px;
+    line-height: 1.17;
+  }
+
+  .wrapper-video {
+    max-width: 614px;
+    padding: 0;
+  }
+
+  .wrapper-video .player {
+    height: 400px;
+  }
+
+  .wrapper-video .player .video {
+    height: 400px;
+    width: 614px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .how-made-section {
+    width: 1136px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .wrapper-video {
+    max-width: 600px;
+  }
+
+  .wrapper-video .player {
+    height: 400px;
+  }
+
+  .wrapper-video .player .video {
+    height: 400px;
+    width: 600px;
+    padding: 0;
+  }
+}
+
+.how-made-information {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px 14px;
+}
+
+.how-made-text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  margin-bottom: 20px;
+}
+
+.how-made-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.how-made-item {
+  position: relative;
+  padding-left: 16px;
+}
+
+.list-decor {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 0px;
+  top: 5px;
+  background: #4c4c4c;
+  border: 1px solid #eceded;
+  border-radius: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+  .how-made-information {
+    width: 614px;
+    padding: 32px;
+  }
+
+  .how-made-text {
+    width: 350px;
+    margin-bottom: 28px;
+  }
+
+  .how-made-item {
+    width: 480px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .how-made-information {
+    width: 516px;
+    height: 400px;
+  }
+
+  .how-made-list {
+    gap: 24px;
+  }
+}
